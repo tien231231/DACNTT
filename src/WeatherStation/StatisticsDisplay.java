@@ -29,7 +29,7 @@ public class StatisticsDisplay implements Observer, DisplayElement
         {
             min = temperature;
         }
-        avg = (max+min)/2f;
+        avg = (max+min)/2;
         display();
     }
 }

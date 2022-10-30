@@ -9,10 +9,16 @@ public class WeatherStation
         CurrentConditionDisplay currentDisplay = new CurrentConditionDisplay(weatherData);
         StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
-        HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
 
-        weatherData.setMeasurements(80, 65, 30.4f);
-        weatherData.setMeasurements(82, 70, 29.2f);
-        weatherData.setMeasurements(78, 90, 29.2f);
+
+        weatherData.setMeasurements(26, 65, 30);
+        weatherData.setMeasurements(27, 70, 29);
+        weatherData.setMeasurements(24, 90, 29);
+
+
+        weatherData.removeObserver(forecastDisplay);
+        weatherData.setMeasurements(16, 90, 28);
+
+
     }
 }
